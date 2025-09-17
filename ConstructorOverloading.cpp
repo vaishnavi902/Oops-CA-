@@ -10,9 +10,9 @@ public:
 
     // Default constructor
     Customer() {
-        name = "Unknown";
-        Acc_no = 0;
-        balance = 0;
+        name = "Mohit";
+        Acc_no = 12;
+        balance = 2500;
     }
 
     // Parameterized constructor (3 parameters)
@@ -24,25 +24,23 @@ public:
 
     // Parameterized constructor (2 parameters)
     Customer(int acc, int bal) {
-        name = "Unknown";  // default if not provided
         Acc_no = acc;
         balance = bal;
+    }
+
+    void display(){
+        cout << name <<" " <<Acc_no << " " << balance << endl;
     }
 };
 
 int main() {
     // Default constructor
     Customer C1;
-    cout << C1.name << " " << C1.Acc_no << " " << C1.balance << endl;
-
-    // Parameterized constructor (3 params)
-    Customer C2("Rohit", 12, 1000);
-    cout << C2.name << " " << C2.Acc_no << " " << C2.balance << endl;
-
-    // Parameterized constructor (2 params)
-    Customer C3(15, 2000);
-    cout << C3.name << " " << C3.Acc_no << " " << C3.balance << endl;
-
+    Customer C2("Rohit" ,14 ,1000);
+    Customer C3(16 , 3000);
+    C1.display();
+    C2.display();
+    C3.display();
     return 0;
 }
 
